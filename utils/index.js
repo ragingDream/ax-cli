@@ -3,7 +3,6 @@ import { execa } from "execa"; // 增强版 child_process
 import chalk from "chalk"; // 输出样式化
 import semver from "semver"; // npm 版本比较
 import downloadGitRepo from "download-git-repo"; // git 远程下载
-import { log } from "node:console";
 
 /**
  * @description 清除控制台消息

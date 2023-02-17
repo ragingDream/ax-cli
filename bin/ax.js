@@ -10,9 +10,10 @@ import ora from "ora"; // loading
 import slash from "slash"; // 路径转换
 import { Command } from "commander"; // 命令行工具
 import { checkNodeVersion, clearConsole, download, installModules } from "../utils/index.js";
+import { getPkgInfo } from "../utils/read-pkg.js";
 import { enhanceErrorMessages } from "../utils/enhanceErrorMessages.js";
 
-const pkg = JSON.parse(fs.readFileSync("package.json", "utf8")); //package.json 信息
+const pkg = getPkgInfo();
 const program = new Command();
 const spinner = ora();
 const { version } = pkg;
